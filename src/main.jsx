@@ -9,6 +9,8 @@ import About from './components/Pages/About.jsx';
 import SignUp from './components/Pages/SignUp.jsx';
 import SignIn from './components/Pages/SignIn.jsx';
 import AuthProvider from './Auth/AuthProvider.jsx';
+import Orders from './components/Pages/Orders.jsx';
+import PrivetRoute from './components/Routes/PrivetRoute.jsx';
 
 
 
@@ -24,7 +26,13 @@ const router = createBrowserRouter([
       },
       {
         path: 'about',
-        Component: About
+        //Component: About
+        element: <PrivetRoute><About/></PrivetRoute>
+      },
+      {
+        path: 'order',
+        //Component: Orders
+        element: <PrivetRoute> <Orders/> </PrivetRoute>
       },
       {
         path: 'signup',

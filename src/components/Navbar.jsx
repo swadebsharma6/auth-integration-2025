@@ -39,13 +39,21 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) => (isActive ? "text-primary" : "")}
-          to="/order"
+          to="/orders"
         >
-          Order
+          Orders
         </NavLink>
       </li>
       
       </>}
+      <li>
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-primary" : "")}
+          to="/dashboard"
+        >
+          Dashboard
+        </NavLink>
+      </li>
       <li>
         <NavLink
           className={({ isActive }) => (isActive ? "text-primary" : "")}
